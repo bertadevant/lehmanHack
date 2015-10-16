@@ -2,7 +2,7 @@
 @import url('http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
 
 body {
-  background-color: #f2f2f2;
+  background-color: #fd680e;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -116,10 +116,13 @@ a.navbar-brand:hover {
 #header {	
 	background-color: #444;
 	background: url(../img/3.jpg) no-repeat center top;
+    
+    background-blend-mode: screen;
      linear-gradient(
       rgba(0, 0, 0, 0.7), 
       rgba(0, 0, 0, 0.5)
     );
+    
 	margin-top: -20px;
 	padding-top: 150px;
 	background-attachment: relative;
@@ -141,18 +144,24 @@ a.navbar-brand:hover {
 
 
 #header h1 {
+    -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;
 	margin-top: 60px;
 	margin-bottom: 15px;
 	color: #fff;
 	font-size: 45px;
 	font-weight: 900;
 	letter-spacing: -1px;
+    text-emphasis-color: white;
 }
 
 h2.subtitle {
+    -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: #535353;
 	color: #fd680e;
     font-weight: 500;
 	font-size: 35px;
+    
 }
 
 /* slide */
@@ -184,6 +193,12 @@ h2.subtitle {
   height: 12px;
   margin: 0;
   background-color: #b7cb1b;
+}
+.modal-footer {   border-top: 0px;
+background-color: orange;}
+
+.btn-primary {
+    background-color: orange;
 }
 
 /* footer */
