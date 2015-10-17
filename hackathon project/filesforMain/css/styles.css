@@ -22,9 +22,13 @@ html,body {
        -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    position: sticky;
   padding-top: 51px; 
-  background-image: url("1.jpg");
+  background-image: url("2.jpg");
 }
 
 .navbar-inverse .navbar-nav > li > a {
