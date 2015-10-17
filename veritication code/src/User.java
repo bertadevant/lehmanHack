@@ -81,7 +81,6 @@ public class User {
 		connect.disconnectFromDB();
 	}
 	
-	//**********************************************************************************
 	//true for thread, false for comment
 	public void vote(boolean flag, int tcId, String user, int type){
 		DBConnect connect = new DBConnect();
@@ -98,7 +97,33 @@ public class User {
 		connect.queryChange(query);	
 		connect.disconnectFromDB();
 	}
-	//**************************************************************************************************
+	//**************************************************************
+	//direction -> 0: down; 1: up
+	public int countVote(boolean flag, String name, int direction){
+		DBConnect connect = new DBConnect();
+		connect.createStatement();
+		String query = "";
+		if(flag){
+			query = "SELECT * FROM lehman_hack.ThreadVotes WHERE User_username = '" + name +"'AND type = " + direction;
+		}else{
+			query = "SELECT * FROM lehman_hack.CommentVotes WHERE User_username = '" + name +"'AND type = " + direction;
+		}
+		System.out.println(query);
+		connect.querySelect(query);
+		int count = 0;
+		try {
+			while (connect.getResultset().next()) {							
+				count++;			
+			}
+		} catch (SQLException ex) {			
+			ex.printStackTrace();
+		} finally {
+			connect.disconnectFromDB();
+		}
+		return count;
+	}
+	//*********************************************************************
+	
 	public String getName() {
 		return name;
 	}
@@ -113,7 +138,9 @@ public class User {
 //		User user2 = new User("heck4", "pass1");
 		User user2 = new User("heck5", "pass1");
 //		user2.comment(1, "work harder");
-		user2.vote(false, 1, user2.getName(), 1);
+//		user2.vote(true, 1, user2.getName(), 1);
+//		user2.vote(true, 3, user2.getName(), 0);
+		System.out.println(user2.countVote(false, "heck5", 1));
 //		user1.isRegister();
 //		user2.creatUser("heck2", "pass2", "4388576018410707", 5);
 //		user2.askQuesiton("I need help with coding", "not sure where to start");
