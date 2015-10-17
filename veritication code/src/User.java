@@ -3,6 +3,7 @@ import java.sql.SQLException;
 
 public class User {
 	private String name;
+	
 	public User(){
 		
 	}
@@ -80,14 +81,39 @@ public class User {
 		connect.disconnectFromDB();
 	}
 	
+	//**********************************************************************************
+	//true for thread, false for comment
+	public void vote(boolean flag, int tcId, String user, int type){
+		DBConnect connect = new DBConnect();
+		connect.createStatement();
+		String query = "";
+		if(flag){
+			query = "INSERT INTO lehman_hack.ThreadVotes (Thread_idThread, User_username, type) VALUES (" 
+					+ tcId + ", '"+user+"', "+type+")";			
+		}else{
+			query = "INSERT INTO lehman_hack.CommentVotes (Comment_idComment, User_username, type) VALUES (" 
+					+ tcId + ", '"+user+"', "+type+")";
+		}		
+		System.out.println(query);
+		connect.queryChange(query);	
+		connect.disconnectFromDB();
+	}
+	//**************************************************************************************************
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		User user1 = new User();
-		user1.creatUser("heck7", "pass1", "4388576018410707", 4);
-		user1.askQuesiton("vew Tire", "not sure where to start");
+//		user1.creatUser("heck7", "pass1", "4388576018410707", 4);
+//		user1.askQuesiton("vew Tire", "not sure where to start");
 //		User user2 = new User("heck4", "pass1");
 		User user2 = new User("heck5", "pass1");
-		user2.comment(1, "work harder");
+//		user2.comment(1, "work harder");
+		user2.vote(false, 1, user2.getName(), 1);
 //		user1.isRegister();
 //		user2.creatUser("heck2", "pass2", "4388576018410707", 5);
 //		user2.askQuesiton("I need help with coding", "not sure where to start");
