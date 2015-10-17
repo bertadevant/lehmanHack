@@ -42,9 +42,47 @@ public class View {
 		}
 		
 	}
-	
+	class Comment{
+		
+		private int cThreadId;
+		private String cAnswer;
+		private String cUser;
+		private String cDate;
+		public Comment(int threadId, String user, String answer, String date){
+			this.cThreadId = threadId;
+			this.cAnswer = answer;
+			this.cUser = user;
+			this.cDate = date;
+		}
+		public int getcThreadId() {
+			return cThreadId;
+		}
+		public String getcAnswer() {
+			return cAnswer;
+		}
+		public String getcUser() {
+			return cUser;
+		}
+		public String getcDate() {
+			return cDate;
+		}
+		public void setcThreadId(int cThreadId) {
+			this.cThreadId = cThreadId;
+		}
+		public void setcAnswer(String cAnswer) {
+			this.cAnswer = cAnswer;
+		}
+		public void setcUser(String cUser) {
+			this.cUser = cUser;
+		}
+		public void setcDate(String cDate) {
+			this.cDate = cDate;
+		}
+		
+	}
 	private String user;
 	private List<Question> questions;
+	private List<Comment> comments; 
 	public View(){
 		
 	}
@@ -84,22 +122,36 @@ public class View {
 		}
 	}
 	
-	public String comment(int threadId){
+	public void commentPrint(){
+		
+		for(int i = 0; i < comments.size(); i++){
+			System.out.println(comments.get(i).getcThreadId() +" "+comments.get(i).getcAnswer()+" " +comments.get(i).getcUser()+" " +comments.get(i).getcDate());
+		}
+	}
+	
+	public List comment(int threadId){
+		comments = new LinkedList<Comment>();
 		DBConnect connect = new DBConnect();
 		connect.createStatement();
-		String query = "SELECT * FROM lehman_hack.Thread WHERE username = '" + user +"'AND pass = '" + passWord +"'";
+		String query = "SELECT * FROM lehman_hack.Comments WHERE Thread_idThread = " + threadId + " ORDER BY date DESC";
 		System.out.println(query);
 		connect.querySelect(query);
 
 		try {
-			if (connect.getResultset().next()) {							
-				return true;				
+			while (connect.getResultset().next()) {							
+				int id = Integer.parseInt(connect.getResultset().getString("Thread_idThread"));
+				String un = connect.getResultset().getString("Thread_User_username");
+				String cComment = connect.getResultset().getString("comment");
+				String cData = connect.getResultset().getString("date");
+				Comment newComment = new Comment(id, cComment, un, cData);
+				comments.add(newComment);
 			}
 		} catch (SQLException ex) {			
 			ex.printStackTrace();
 		} finally {
 			connect.disconnectFromDB();
 		}
+		return comments;
 	}
 	
 	public static void main(String[] args) {
@@ -107,6 +159,8 @@ public class View {
 		View view = new View();
 		view.allThread();
 		view.print();
+		view.comment(1);
+		view.commentPrint();
 	}
 
 }

@@ -83,8 +83,8 @@ public class User {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		User user1 = new User();
-		user1.creatUser("heck6", "pass1", "4388576018410707", 4);
-		user1.askQuesiton("Tire", "not sure where to start");
+		user1.creatUser("heck7", "pass1", "4388576018410707", 4);
+		user1.askQuesiton("vew Tire", "not sure where to start");
 //		User user2 = new User("heck4", "pass1");
 		User user2 = new User("heck5", "pass1");
 		user2.comment(1, "work harder");
