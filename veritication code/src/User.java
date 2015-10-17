@@ -70,12 +70,25 @@ public class User {
 		connect.disconnectFromDB();
 	}
 	
+	public void comment(int threadId, String answer){
+		DBConnect connect = new DBConnect();
+		connect.createStatement();
+		String query = "INSERT INTO lehman_hack.Comments (Thread_idThread, Thread_User_username, comment, censured) VALUES (" 
+				+ threadId +", '"+ name + "', '"+answer+"', "+0+")";
+		System.out.println(query);
+		connect.queryChange(query);	
+		connect.disconnectFromDB();
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		User user1 = new User();
-//		user1.creatUser("heck4", "pass1", "4388576018410707", 4);
-//		user1.askQuesiton("I need help with coding", "not sure where to start");
-		User user2 = new User("heck1", "pass1");
+		User user1 = new User();
+		user1.creatUser("heck6", "pass1", "4388576018410707", 4);
+		user1.askQuesiton("Tire", "not sure where to start");
+//		User user2 = new User("heck4", "pass1");
+		User user2 = new User("heck5", "pass1");
+		user2.comment(1, "work harder");
+//		user1.isRegister();
 //		user2.creatUser("heck2", "pass2", "4388576018410707", 5);
 //		user2.askQuesiton("I need help with coding", "not sure where to start");
 	}
