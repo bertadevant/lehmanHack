@@ -3,10 +3,11 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Bootstrap 3 Affix Sidebar</title>
+		<title>homepage</title>
 		<meta name="" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="FilesForHomepage/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
+        	<link href="FilesForHomepage/css/bootstrap.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -22,21 +23,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">Bootply</a>
+      <a href="/" class="navbar-brand">To Be Anounced</a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li>
-          <a href="#sec">Get Started</a>
+          <a href="#sec">Contact Help</a>
         </li>
         <li>
-          <a href="#sec">Edit</a>
+          <a href="#sec">Resources</a>
         </li>
         <li>
-          <a href="#sec">Visualize</a>
+          <a href="#sec">Chat</a>
         </li>
         <li>
-          <a href="#sec">Prototype</a>
+          <a href="#sec">About Us</a>
         </li>
       </ul>
     </nav>
@@ -176,6 +177,16 @@
 
         </div><!--/right-->
   	</div><!--/row-->
+    <div id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-lg-offset-3">
+					<p class="copyright">Copyright &copy; 2015 - Designed by Team 13 Lehman Hackathon 2015</a></p>
+			</div>
+           
+		</div>		
+	</div>	
+	</div>
 </div><!--/container-->
 
 
@@ -186,37 +197,7 @@
                 
                 
                 src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script type="text/javascript">
-            $(document).ready(function(){/* activate sidebar */
-$('#sidebar').affix({
-  offset: {
-    top: 235
-  }
-});
-
-/* activate scrollspy menu */
-var $body   = $(document.body);
-var navHeight = $('.navbar').outerHeight(true) + 10;
-
-$body.scrollspy({
-	target: '#leftCol',
-	offset: navHeight
-});
-
-/* smooth scrolling sections */
-$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top - 50
-        }, 1000);
-        return false;
-      }
-    }
-});
-});</script>
+		<script src="FilesForHomepage/js/bootstrap.min.js"</script>
 		<script src="/FilesForHomepage/js/scripts.js"></script>
 	</body>
 </html>
