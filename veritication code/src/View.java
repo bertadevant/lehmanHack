@@ -129,6 +129,43 @@ public class View {
 		}
 	}
 	
+	//************************************************************
+	public String[] thread(int threadId){
+		//thread[0] -> title
+		//thread[1] -> description
+		//thread[2] -> date
+		String[] thread = new String[3];
+		DBConnect connect = new DBConnect();
+		connect.createStatement();
+		String query = "SELECT title, post, date FROM `Thread` WHERE idThread = "+threadId;
+		System.out.println(query);
+		connect.querySelect(query);
+
+		try {
+			if (connect.getResultset().next()) {					
+				String ti = connect.getResultset().getString("title");
+				String description = connect.getResultset().getString("post");
+				String da = connect.getResultset().getString("date");
+				thread[0] = ti;
+				thread[1] = description;
+				thread[2] = da;
+			}
+		} catch (SQLException ex) {			
+			ex.printStackTrace();
+		} finally {
+			connect.disconnectFromDB();
+		}
+		return thread;
+	}
+	//************************************************
+	
+	public void printSingleThread(){
+		String[] test = thread(1);
+		for(int i = 0; i < test.length; i++){
+			System.out.println(test[i]);
+		}
+	}
+	
 	public List comment(int threadId){
 		comments = new LinkedList<Comment>();
 		DBConnect connect = new DBConnect();
@@ -161,6 +198,7 @@ public class View {
 		view.print();
 		view.comment(1);
 		view.commentPrint();
+		view.printSingleThread();
 	}
 
 }
