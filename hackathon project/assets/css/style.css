@@ -1,6 +1,14 @@
 /* ==== Google font ==== */
 @import url('http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
 
+/*created by Berta */
+
+.padding-bottom-md 
+{
+  padding-bottom: 10px;
+}
+
+
 body {
   background-color: #fd680e;
     font-family: 'Lato', sans-serif;
