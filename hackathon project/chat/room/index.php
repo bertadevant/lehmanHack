@@ -35,6 +35,8 @@
     <title>Welcome to: <?php echo $name; ?></title>
     
     <link rel="stylesheet" type="text/css" href="../main.css"/>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/styles.css" rel="stylesheet">
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="chat.js"></script>

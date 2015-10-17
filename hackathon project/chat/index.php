@@ -13,6 +13,8 @@
     <title>Chat2</title>
     
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2" type="text/javascript"></script>
     <script type="text/javascript" src="check.js"></script>

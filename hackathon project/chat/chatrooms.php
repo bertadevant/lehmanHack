@@ -18,9 +18,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Chat Rooms Avaliable</title>
+    <title>Talk to Someone</title>
     
     <link rel="stylesheet" type="text/css" href="main.css"/>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,7 +31,7 @@
     
     	<div id="header">
     	
-        	<h1><a href="/index.php">Chat Rooms Avaliable</a></h1>
+        	<h1><a href="/index.php">Talk to Someone</a></h1>
         	
         	<div id="you"><span>Logged in as:</span> <?php echo $_SESSION['userid']?></div>
         	
