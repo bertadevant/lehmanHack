@@ -1,0 +1,6 @@
+<span>chris</span>hi 
+<span>chris</span>hello 
+<span>berta2</span>doing ok nothing much
+<span>chris</span>wanna talk about it? 
+<span>balde</span>I do
+<span>berta2</span>you go first

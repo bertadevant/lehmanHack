@@ -288,12 +288,12 @@
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus {
-  text-shadow: 0 -1px 0 #3071a9;
-  background-image: -webkit-linear-gradient(top, #428bca 0%, #3278b3 100%);
-  background-image:         linear-gradient(to bottom, #428bca 0%, #3278b3 100%);
+  text-shadow: 0 -1px 0 #fd680e;
+  background-image: -webkit-linear-gradient(top, #fd680e 0%, #fd680e 100%);
+  background-image:         linear-gradient(to bottom, #fd680e 0%, #fd680e 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff3278b3', GradientType=0);
   background-repeat: repeat-x;
-  border-color: #3278b3;
+  border-color: #fd680e;
 }
 .panel {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
