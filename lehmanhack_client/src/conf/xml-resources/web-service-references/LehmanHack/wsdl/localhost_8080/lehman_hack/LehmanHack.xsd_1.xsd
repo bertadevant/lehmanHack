@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://lh/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://lh/">
+
+<xs:element name="createUser" type="tns:createUser"/>
+
+<xs:element name="createUserResponse" type="tns:createUserResponse"/>
+
+<xs:element name="getComments" type="tns:getComments"/>
+
+<xs:element name="getCommentsResponse" type="tns:getCommentsResponse"/>
+
+<xs:element name="getThreadDetails" type="tns:getThreadDetails"/>
+
+<xs:element name="getThreadDetailsResponse" type="tns:getThreadDetailsResponse"/>
+
+<xs:element name="getThreads" type="tns:getThreads"/>
+
+<xs:element name="getThreadsResponse" type="tns:getThreadsResponse"/>
+
+<xs:element name="login" type="tns:login"/>
+
+<xs:element name="loginResponse" type="tns:loginResponse"/>
+
+<xs:element name="operation" type="tns:operation"/>
+
+<xs:element name="operationResponse" type="tns:operationResponse"/>
+
+<xs:element name="postComment" type="tns:postComment"/>
+
+<xs:element name="postCommentResponse" type="tns:postCommentResponse"/>
+
+<xs:element name="updownvote" type="tns:updownvote"/>
+
+<xs:element name="updownvoteResponse" type="tns:updownvoteResponse"/>
+
+<xs:complexType name="getThreadDetails">
+<xs:sequence>
+<xs:element name="inputThreadId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getThreadDetailsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="postComment">
+<xs:sequence>
+<xs:element name="inputUsername" type="xs:string" minOccurs="0"/>
+<xs:element name="inputComment" type="xs:string" minOccurs="0"/>
+<xs:element name="threadID" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="postCommentResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updownvote">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+<xs:element name="userid" type="xs:string" minOccurs="0"/>
+<xs:element name="typeVote" type="xs:string" minOccurs="0"/>
+<xs:element name="CommentorThread" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updownvoteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getComments">
+<xs:sequence>
+<xs:element name="threadID" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCommentsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createUser">
+<xs:sequence>
+<xs:element name="usernaname" type="xs:string" minOccurs="0"/>
+<xs:element name="passoword" type="xs:string" minOccurs="0"/>
+<xs:element name="card" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="operation">
+<xs:sequence>
+<xs:element name="fadsfs" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="operationResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="login">
+<xs:sequence>
+<xs:element name="inputUsername" type="xs:string" minOccurs="0"/>
+<xs:element name="inputPassword" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getThreads">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getThreadsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
