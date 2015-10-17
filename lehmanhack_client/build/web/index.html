@@ -1,433 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Application that helps abused people">
+    <meta name="authors" content="team 13 hackathon 2015">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <title>Main Page</title>
-        <meta name="generator" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link href="filesforMain/css/bootstrap.min.css" rel="stylesheet">
-        <!--[if lt IE 9]>
-                <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <link href="filesforMain/css/styles.css" rel="stylesheet">
-        
+    <title>To be decided</title>
 
-    </head>
-    <body>
-        <div class="page-container">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-theme.css" rel="stylesheet">
 
-            <!-- top navbar -->
-            <nav class="navbar navbar-inverse nav-tabs navbar-fixed-top" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">To Be Anounced</a>
-                </div>
-            </nav>
-            <div class = "bkg-image">
-                <div class="container-fluid ">
-
-                    <div class="row row-offcanvas row-offcanvas-left">
-
-                        <!--sidebar-->
-                        <div class="col-xs-6 col-sm-3" id="sidebar" role="navigation">
-                            <div >
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" id="panel-default"><h4>Hello <br>Welcome <span id="welcomeusername"></span> </h4></div>
-
-                                    <ul class="nav nav-pills nav-stacked padding-left-sm padding-bottom-sm" id="sidebar-nav">                                             
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#section1">Your Posts</a></li>
-                                        <li><a href="#section2">Contact Help</a></li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!--/sidebar-->
-
-                        <!--/main-->
-                        <br>
-                        <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading"><a  class="pull-right">View all</a> <h4>Help Pages</h4></div>
-                                        <div class="panel-body">
-                                            <div class="list-group">
-                                                <a href="http://www.adaa.org/" class="list-group-item active" target="_blank">Anxiety and Depression</a>
-                                                <a href="http://www.nimh.nih.gov/health/topics/bipolar-disorder/index.shtml" class="list-group-item" target="_blank">National Institute of Mental Health </a>
-                                                <a href="http://www.dbsalliance.org/site/PageServer?pagename=home" class="list-group-item" target="_blank">Depresion and Bypolar Depression</a>
-                                                <a href="http://www.centreforemotionalhealth.com.au/pages/aboutus-background.aspx" class="list-group-item" target="_blank">Centre for Emotional Health</a>
-                                                <a href="http://au.reachout.com/" class="list-group-item" target="_blank">Kids Rich Out</a>
-                                                <a href="https://www.suicidecallbackservice.org.au/" class="list-group-item" target="_blank">Suicide Call Back Service </a>
-                                                <a href="http://www.dadsindistress.asn.au/" class="list-group-item"target="_blank">Dads in Distress </a>
-                                                <a href="http://www.mothersafe.org.au/" class="list-group-item" target="_blank">MotherSafe</a>
-                                                <a href="http://www.copmi.net.au/" class="list-group-item" target="_blank">Children of Parents with a Mental Illness</a>
-                                            </div>
-                                        </div><!--/panel-body-->
-                                    </div><!--/panel-->
-
-                                    <div class="well"> 
-                                        <form class="form-horizontal" role="form">
-                                            <h4>Tell Us How You Feel</h4>
-                                            <div class="form-group NOpadding-bottom" style="padding-left:14px; padding-right:14px;">
-                                                <textarea class="form-control padding-bottom-xs" placeholder="Update your status"></textarea>
-                                                <button class="btn btn-success pull-right" type="button">Post</button>
-                                            </div>
-                                        </form>
-                                    </div><!--/well-->
-                                </div><!--/col-->
-
-                                <div class="col-sm-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading"><h4>Therapists on your area</h4></div>
-                                        <div class="panel-body">
-                                            <div class="row">
-                                                <div class="col-md-3">
-                                                    <a href="https://www.zocdoc.com/doctor/mark-rybakov-do-66048">
-                                                        <img src="https://dsw5h1xg5uvx.cloudfront.net/e6fb93bd-bdf2-4340-a004-8eae886c24cbzoom.jpg" class="img-circle  pull-right img-responsive"> </a>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <a href="https://www.zocdoc.com/professional/karla-fallon-phd-lmhc-143848">
-                                                        <img src="https://dsw5h1xg5uvx.cloudfront.net/f8e709b5-89fd-43eb-b3d5-f54c678d7552zoom.jpg" class="img-circle img-responsive"> </a>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <a href="https://www.zocdoc.com/doctor/dalit-gross-psyd-34056">
-                                                    <img src="https://d2t808ag5aqhkh.cloudfront.net/2e2887d7-615e-4a13-a569-4be11c2b5b31zoom.jpg" class="img-circle img-responsive"> </a>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <a href="https://www.zocdoc.com/doctor/melissa-kresch-phd-62890">
-                                                        <img src="https://d2t808ag5aqhkh.cloudfront.net/1194ec9a-4024-4662-9620-8ba8a4510f1bzoom.jpg" class="img-circle img-responsive"> </a>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                    <a href="https://www.zocdoc.com/doctor/koby-yaakov-frances-phd-118020">
-                                                        <img src="https://dsw5h1xg5uvx.cloudfront.net/a56c8c67-e52e-4139-9d33-179643c9f40ezoom.jpg" class="img-circle pull-right img-responsive"></a>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <a href="https://www.zocdoc.com/doctor/karthik-gunnia-psyd-122950">
-                                                    <img src="https://d2t808ag5aqhkh.cloudfront.net/e6a6d0db-8017-470c-941f-18274b235099zoom.jpg" class="img-circle img-responsive"> </a>
-                                                </div>
-                                                <div class="col-md-2">
-                                                     <a href="https://www.zocdoc.com/professional/naomi-kehati-bronner-phd-73274">
-                                                     <img src="https://d1cesmq0xhh7we.cloudfront.net/be99b025-1e3a-4645-b1d0-e09430afb8c5zoom.jpg" class="img-circle img-responsive"></a>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <a href="https://www.zocdoc.com/doctor/yasmine-saad-phd-67698">
-                                                    <img src="https://dsw5h1xg5uvx.cloudfront.net/358c870b-54b3-41cc-9330-7f81365ccc1dzoom.jpg" class="img-circle img-responsive"> </a>
-                                                </div>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <hr>
-                                            <div class="btn-group pull-right btn-toggle"> 
-                                                <a href="#"><p class="pull-right">Find More</p></a>
-                                            </div>
-                                        </div><!--/panel-body-->
-                                    </div><!--/panel-->
-
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading"><a href="hjavascript:void('0')" NAME="Chat"  title=" Talk to Someone " 
-                                            onClick=window.open("http://lehmanhack.bertadevant.com/chat/","Ratting","width=550,height=170,0,status=0,") 
-                                            class="pull-right btn btn-default";>Chat</a> <h4>Talk to Someone</h4></div>
-                                        <div class="panel-body">
-                                            <p>Therapist and support groups just one click away 24/7</p>
-                                        </div><!--/panel-body-->
-                                    </div><!--/panel-->
-                                </div><!--/col-->
-                            </div><!--/row-->
-
-                            <h1 id="section1">Questionare</h1>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Newest Items</h4></div>
-                                <div class="panel-body">
-                                    <div id = "recentposts" class="list-group">
-                                        <!--<a href="#" class="list-group-item active">Active item</a>
-                                        <a href="#" class="list-group-item">Second item</a>
-                                        <a href="#" class="list-group-item">Third item</a>-->
-                                    </div>
-                                </div>
-                            </div><!--/panel-->
-
-
-
-                            <h2 id="section2">Section 2</h2>
-                            <p>Fusce sollicitudin lacus lacinia mi tincidunt ullamcorper. Aenean velit ipsum, vestibulum nec 
-                                tincidunt eu, lobortis vitae erat. Nullam ultricies fringilla ultricies. Sed euismod nibh quis 
-                                tincidunt dapibus. Nulla quam velit, porta sit amet felis eu, auctor fringilla elit. Donec 
-                                convallis tincidunt nibh, quis pellentesque sapien condimentum a. Phasellus purus dui, rhoncus 
-                                id suscipit id, ornare et sem. Duis aliquet posuere arcu a ornare. Pellentesque consequat libero 
-                                id massa accumsan volutpat. Fusce a hendrerit lacus. Nam elementum ac eros eu porttitor. 
-                                Phasellus enim mi, auctor sit amet luctus a, commodo fermentum arcu. In volutpat scelerisque 
-                                quam, nec lacinia libero.
-                            </p>
-                            <hr>
-                            <button class="btn btn-success">View</button>
-                            
-
-
-                        </div><!--/panel-body-->
-                    </div><!--/panel-->
-                </div><!--/col-6-->
-
-
-
-            </div><!--/panel-body-->
-        </div><!--/panel-->
-    </div><!--/col-6-->
-
-
-</div><!--/col-6-->
-
-<div class="clearfix"></div>
-
-</div><!--/.col-xs-12-->
-</div><!--/.row-->
-</div>
-</div>
-</div><!--/.container-->
-=======
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
-		<title>Main Page</title>
-		<meta name="generator" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="filesforMain/css/bootstrap.min.css" rel="stylesheet">
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href="filesforMain/css/styles.css" rel="stylesheet">
-        
-	</head>
-	<body>
-<div class="page-container">
-  
-	<!-- top navbar -->
-    <nav class="navbar navbar-inverse nav-tabs navbar-fixed-top" role="navigation">
-    	<div class="navbar-header">
-           <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-           </button>
-           <a class="navbar-brand" href="index.html">To Be Anounced</a>
-    	</div>
-    </nav>
-      <div class = "bkg-image">
-    <div class="container-fluid ">
-        
-      <div class="row row-offcanvas row-offcanvas-left">
-        
-        <!--sidebar-->
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-          <div data-spy="affix" data-offset-top="45" data-offset-bottom="90">
-              <div class="panel panel-default">
-              <div class="panel-heading" id="panel-default"><h4>Hello <br>Welcome  USER </h4></div>
-           
-              <ul class="nav nav-pills nav-stacked padding-left-sm padding-bottom-sm" id="sidebar-nav">                                             
-              <li><a href="#">Home</a></li> 
-              <li><a href="#section1">Your Posts</a></li>
-              <li><a href="#section2">Contact Help</a></li>
-                               
-            </ul>
-                  </div>
-           </div>
-        </div><!--/sidebar-->
-  	
-        <!--/main-->
-          <br>
-        <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
-          <div class="row">
-           	 <div class="col-sm-6">
-                <div class="panel panel-default">
-                  <div class="panel-heading"><a  class="pull-right">View all</a> <h4>Types of Help</h4></div>
-                    <div class="panel-body">
-                      <div class="list-group">
-                        <a href="http://www.adaa.org/" class="list-group-item active" target="_blank">Anxiety and Depression</a>
-                        <a href="http://www.nimh.nih.gov/health/topics/bipolar-disorder/index.shtml" class="list-group-item" target="_blank">National Institute of Mental Health </a>
-                        <a href="http://www.dbsalliance.org/site/PageServer?pagename=home" class="list-group-item" target="_blank">Depresion and Bypolar Depression</a>
-                        <a href="http://www.centreforemotionalhealth.com.au/pages/aboutus-background.aspx" class="list-group-item" target="_blank">Centre for Emotional Health</a>
-                        <a href="http://au.reachout.com/" class="list-group-item" target="_blank">Kids Rich Out</a>
-                        <a href="https://www.suicidecallbackservice.org.au/" class="list-group-item" target="_blank">Suicide Call Back Service </a>
-                        <a href="http://www.dadsindistress.asn.au/" class="list-group-item"target="_blank">Dads in Distress </a>
-                        <a href="http://www.mothersafe.org.au/" class="list-group-item" target="_blank">MotherSafe</a>
-                        <a href="http://www.copmi.net.au/" class="list-group-item" target="_blank">Children of Parents with a Mental Illness</a>
-                      </div>
-                    </div><!--/panel-body-->
-                </div><!--/panel-->
-             
-                <div class="well"> 
-                     <form class="form-horizontal" role="form">
-                      <h4>Tell Us How You Feel</h4>
-                       <div class="form-group" style="padding:14px;">
-                        <textarea class="form-control" placeholder="Update your status"></textarea>
-                      </div>
-                      <button class="btn btn-success pull-right" type="button">Post</button><ul class="list-inline"><li><a href="#"><i class="glyphicon glyphicon-align-left"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-center"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-right"></i></a></li></ul>
-                    </form>
-                </div><!--/well-->
-             
-                <div class="panel panel-default">
-                   <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Responsive Design</h4></div>
-                    <div class="panel-body">
-                      <p><a class="img-circle pull-right"> <a href="#">Bootstrap Playground</a></p>
-                      <div class="clearfix"></div>
-                      <hr>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-                      Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
-                      dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-                      Aliquam in felis sit amet augue.
-                      <hr>
-                      <div class="btn-group pull-right btn-toggle"> 
-                        <button class="btn btn-default">ON</button>
-                        <button class="btn btn-primary active">OFF</button>
-                      </div>
-                    </div><!--/panel-body-->
-                 </div><!--/panel-->
-            </div><!--/col-->
-            
-            <div class="col-sm-6">
-                 
-        
-                 <div class="panel panel-default">
-                   <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>People You May Know</h4></div>
-                    <div class="panel-body">
-                      <p> Bootstrap Playground</a></p>
-                      <div class="clearfix"></div>
-                      <hr>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-                      Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
-                      dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-                      Aliquam in felis sit amet augue.
-                      <hr>
-                      <div class="btn-group pull-right btn-toggle"> 
-                        <button class="btn btn-default">ON</button>
-                        <button class="btn btn-primary active">OFF</button>
-                      </div>
-                    </div><!--/panel-body-->
-                 </div><!--/panel-->
-              
-                 <div class="panel panel-default">
-                   <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Portlet Heading</h4></div>
-                    <div class="panel-body">
-                      <ul class="list-group">
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                        	<button class="btn btn-xs btn-default">On</button>
-                        	<button class="btn btn-xs btn-primary active">Off</button>
-                       	  </span>  
-                          Bootply
-                        </li>
-                      <li class="list-group-item">
-                        <span href="#" class="btn-group btn-toggle pull-right"> 
-                        	<button class="btn btn-xs btn-primary active">On</button>
-                        	<button class="btn btn-xs btn-default">Off</button>
-                       	  </span> Templates</li>
-                      <li class="list-group-item">
-                        <span href="#" class="btn-group btn-toggle pull-right"> 
-                        	<button class="btn btn-xs btn-default">On</button>
-                        	<button class="btn btn-xs btn-primary active">Off</button>
-                       	  </span> Snippets</li>
-                      </ul>
-                    </div><!--/panel-body-->
-                 </div><!--/panel-->
-              </div><!--/col-->
-          </div><!--/row-->
-          
-          <h1 id="section1">Questionare</h1>
-  
-          <div class="panel panel-default">
-          	<div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Newest Items</h4></div>
-   			<div class="panel-body">
-              <div class="list-group">
-                <a href="#" class="list-group-item active">Active item</a>
-                <a href="#" class="list-group-item">Second item</a>
-                <a href="#" class="list-group-item">Third item</a>
-              </div>
-            </div>
-          </div><!--/panel-->
-          
-          
+    <!-- siimple style -->
+    <link href="assets/css/style.css" rel="stylesheet">
     
-          <h2 id="section2">Section 2</h2>
-          <p>Fusce sollicitudin lacus lacinia mi tincidunt ullamcorper. Aenean velit ipsum, vestibulum nec 
-            tincidunt eu, lobortis vitae erat. Nullam ultricies fringilla ultricies. Sed euismod nibh quis 
-            tincidunt dapibus. Nulla quam velit, porta sit amet felis eu, auctor fringilla elit. Donec 
-            convallis tincidunt nibh, quis pellentesque sapien condimentum a. Phasellus purus dui, rhoncus 
-            id suscipit id, ornare et sem. Duis aliquet posuere arcu a ornare. Pellentesque consequat libero 
-            id massa accumsan volutpat. Fusce a hendrerit lacus. Nam elementum ac eros eu porttitor. 
-            Phasellus enim mi, auctor sit amet luctus a, commodo fermentum arcu. In volutpat scelerisque 
-            quam, nec lacinia libero.
-          </p>
-          <hr>
-          <button class="btn btn-primary">View</button> <button class="btn btn-primary">Download</button>
-          
-        
-         
-          <hr>
-  
-          
-                    </div><!--/panel-body-->
-               </div><!--/panel-->
-           </div><!--/col-6-->
-            
-          
-                    
-                  </div><!--/panel-body-->
-              </div><!--/panel-->
-          </div><!--/col-6-->
-            
-          
-            </div><!--/col-6-->
-          
-          	<div class="clearfix"></div>
-          
-        </div><!--/.col-xs-12-->
-      </div><!--/.row-->
-    </div>
-            </div>
-  </div><!--/.container-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-</div><!--/.page-container-->
-  
-<footer><!--footer-->
-  <div class="container">
-      	<div class="row">
-          <ul class="list-unstyled text-right">
-            <li class="col-sm-4 col-xs-6">
-              <a href="#">Home</a>
-            </li>
-            <li class="col-sm-4 col-xs-6">
-              <a href="#">Services</a>
-            </li>
-            <li class="col-sm-4 col-xs-6">
-              <a href="#">Your Posts</a>
-            </li>
-            <li class="col-sm-4 col-xs-6">
-              <a href="#">Contact Help</a>
-            </li>
-            <li class="col-sm-4 col-xs-6">
-              <a href="#">Logout</a>
-            </li>
-           <li class="col-sm-4 col-xs-6">
-              <a href="#">Donate</a>
-            </li>
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="main.html">To Be Decided</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="registration.html">Sign up</a></li>
+			<li><a href="login.html">Sign in</a></li>
           </ul>
-		</div><!--/row-->
-    </div><!--/container-->
-</footer>
-        
-	<!-- script references -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/scripts.js"></script>
-	</body>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div id="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+                    <h1><center>Welcome to "to be decided"</center></h1>
+                    <h2 class="subtitle"><center>You are not alone</center></h2>
+					<form class="form-inline signup" role="form">
+					  
+                        <button type="submit" class="btn btn-theme"><a href="login.html">Start Now </button></a>
+					</form>					
+				</div>
+				<div class="col-lg-4 col-lg-offset-2">
+					</div>		
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+	<div class="container">
+		<div class="column">
+			<div class="col-lg-6 col-lg-offset-3">
+					<p class="copyright">Copyright &copy; 2015 - Designed by Team 13 Lehman Hackathon 2015</a></p>
+			</div>
+           
+		</div>		
+	</div>	
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
 </html>

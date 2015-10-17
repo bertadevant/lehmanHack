@@ -24,7 +24,7 @@
                         <h1 class="text-center">Login</h1>
                     </div>
                     <div class="modal-body">
-                        <form class="form col-md-12 center-block">
+                        <form>
                             <div class="form-group">
                                 <input id="username" type="text" class="form-control input-lg" placeholder="Username">
                             </div>
@@ -32,7 +32,7 @@
                                 <input id="password" type="password" class="form-control input-lg" placeholder="Password">
                             </div>
                             <div class="form-group">
-                                <button id="signin" class="btn btn-primary btn-lg btn-block backGroundColorOrange">Sign In</button>
+                                <button id="signin" class="btn btn-primary btn-lg btn-block">Sign In</button>
                                 <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
                             </div>
                         </form>
@@ -45,35 +45,31 @@
         </div>
         <!-- script references -->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
 
         <script>
-            var user = {
-                username : ""
-            };
-            
+
             $(document).ready(function () {
                 $("#signin").click(function () {
-                    var username = $("#username").val();
-                    user.username = username;
-                    var pass = $("#password").val();
+                    var username1 = $("#username").val();
+                    var pass1 = $("#password").val();
                     $.ajax({
                         type: "POST",
                         url: "login.jsp",
-                        data: "username=" + username + "&password=" + pass,
+                        data: "username=" + username1 + "&password=" + pass1,
                         success: function (data) {
                             if (data.equals("true")) {
-                                //redirect to the next page
                                 window.location.replace("index.html");
                             } else {
-                                // change something
+                                alert("sometghin roasdfw");
                             }
 
                         }
                     });
 
                     return false;
+
                 });
             });
 
