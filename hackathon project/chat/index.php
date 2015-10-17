@@ -23,7 +23,7 @@
     <div id="page-wrap"> 
     
     	<div id="header">
-        	<h1><a href="/examples/Chat2/">Chat v2</a></h1>
+        	<h1><a href="/chat">Talk to Someone</a></h1>
         </div>
         
     	<div id="section">

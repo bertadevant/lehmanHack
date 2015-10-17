@@ -1,7 +1,7 @@
 <?php
 
   $function = htmlentities(strip_tags($_POST['function']), ENT_QUOTES);
-	$file = htmlentities(strip_tags($_POST['file']), ENT_QUOTES);
+$file = htmlentities(strip_tags($_POST['file']), ENT_QUOTES);
     
   $log = array();
     
@@ -33,6 +33,7 @@
     			 $message = preg_replace($patterns, $replacements, $message);
             	
             	 fwrite(fopen($file, 'a'), "<span>". $nickname . "</span>" . $message = str_replace("\n", " ", $message) . "\n"); 
+                 //fwrite(fopen($file, 'a'), $nickname . "~\t~" . $message = str_replace("\n", " ", $message) . "\n"); 
     		 }
     		 
         	 break;

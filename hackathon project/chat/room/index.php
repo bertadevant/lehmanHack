@@ -16,7 +16,7 @@
 		
 	  	if (mysql_num_rows($roomResults) < 1) {
   			header("Location: ../chatrooms.php");
-  			die();
+  			die(); //could add a create your own chat room here 
   		}
         	
       while ($rooms = mysql_fetch_array($roomResults)) {
@@ -54,7 +54,7 @@
     
     	<div id="header">
     	
-        	<h1><a href="/examples/Chat2/">Chat v2</a></h1>
+        	<h1><a href="/chat">Talk to Someone</a></h1>
         	
         	<div id="you"><span>Logged in as:</span> <?php echo $_SESSION['userid']?></div>
         	

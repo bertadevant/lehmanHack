@@ -134,3 +134,78 @@ function getuserlist(room, username) {
     });
 	
 }
+
+/* Whisper function -- 
+
+
+function Chat (filetxt, user) {
+file = filetxt;
+usernameid = user;
+this.init = chatInit;
+this.update = updateChat;
+this.send = sendChat;
+this.getState = getStateOfChat;
+this.trim = trimstr;
+this.getUsers = getuserlist;
+}
+
+function updateChat(){
+
+$.ajax({
+
+type: "GET",
+url: "update.php",
+data: { 
+'state': state,
+'file' : file,
+'nickname': usernameid
+},
+dataType: "json",
+...
+
+function getuserlist(room, username) {
+
+roomid = room;
+usernameid = username;
+
+$.ajax({
+type: "GET",
+url: "userlist.php",
+data: { 
+'room' : room,
+'username': username,
+'current' : numOfUsers
+
+},
+dataType: "json",
+cache: false,
+success: function(data) {
+
+if (numOfUsers != data.numOfUsers) {
+numOfUsers = data.numOfUsers;
+var list = "
+
+Current Chatters
+";
+for (var i = 0; i < data.userlist.length; i++) { 
+list += '
+'+ data.userlist[i] +"
+";
+}
+$('#userlist').html($("
+"+ list +"
+"));
+}
+
+setTimeout('getuserlist(roomid, usernameid)', 1);
+
+},
+});
+
+}
+
+function wisper(to)
+{
+$('#sendie').val('@'+to+' '+$('#sendie').val());
+}
+*/

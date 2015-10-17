@@ -3,12 +3,9 @@
   //  CONSIDER THIS SECURITY MEASURE ON WHERE THE
   //  FILE CAN ONLY BE CALLED VIA AJAX AND FROM SPECIFIC LOCATIONS
   // 
-  // if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_REFERER']!="http://your-site.com/path/to/chat.js") {
-  //   die();
-  // } 
-
+ if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_REFERER']!="http://your-site.com/path/to/chat.js") {
+ die();} 
 ?>
-  
   
 <?php
 
