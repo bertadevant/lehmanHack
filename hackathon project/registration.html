@@ -1,85 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
-		<title>Login Form</title>
-		<meta name="generator" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Login Form</title>
+        <meta name="generator" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!--[if lt IE 9]>
+                <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
         <link href="assets/css/styles.css" rel="stylesheet">
-	</head>
-	<body>
-<!--login modal-->
-<div id="loginModal" class="modal show " tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-  <div class="modal-content">
-      <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h1 class="text-center">Register</h1>
-      </div>
-      <div class="modal-body">
-          <form class="form center-block">
-            <div class="form-group col-md-12">
-              <input id="email" type="text" class="form-control input-lg" placeholder="Email">
-            </div>
-            <div class="form-group col-md-12">
-              <input id="password" type="password" class="form-control input-lg" placeholder="Password">
-            </div>
-            <div class="form-group col-md-6 ">
-                <div class="padding-bottom-mdpadding-bottom-md">
-                    <input placeholder="Full name" class="form-control input-lg" type="text" name="name">
-                </div>
-                <div class="padding-bottom-md">
-                    <input placeholder="Card number" class="form-control input-lg" type="text" name="number">
-                </div>
-            </div>
-            <div class="form-group col-md-3">
-                <div class="padding-bottom-md">
-                   <input placeholder="MM/YY" class="form-control input-lg" type="text" name="expiry">
-                </div>
-                <div class="padding-bottom-md">
-                   <input placeholder="CVC" type="text" class="form-control input-lg" name="cvc">
-                </div>
-            </div>
-            <div class="form-group col-md-12">
-              <button id="register" class="btn btn-primary btn-lg btn-block backGroundColorOrange">Register</button>
-              <span class="pull-right"><a href="#">Login</a></span><span><a href="#">Need help?</a></span>
-            </div>
-          </form>
-      </div>
-      <div class="modal-footer">
-      </div>
-  </div>
-  </div>
-</div>
-	<!-- script references -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function () {
 
-        $("#signin").click(function () {
-            var username = $("#username").val();
-            var password = $("#password").val();
+    </head>
+    <body>
+        <!--login modal-->
+        <div id="loginModal" class="modal show " tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h1 class="text-center">Register</h1>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form center-block">
+                            <div class="form-group col-md-12">
+                                <input id="username" type="text" class="form-control input-lg" placeholder="Username">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input id="password" type="password" class="form-control input-lg" placeholder="Password">
+                            </div>
+                            <div class="form-group col-md-6 ">
+                                <div class="padding-bottom-mdpadding-bottom-md">
+                                    <input id="name" placeholder="Full name" class="form-control input-lg" type="text" name="name">
+                                </div>
+                                <div class="padding-bottom-md">
+                                    <input id="cardnumber" placeholder="Card number" class="form-control input-lg" type="text" name="number">
+                                </div>
+                            </div>
 
-            $.ajax({
-                type: "POST",
-                url: "login.jsp",
-                data: "username=" + username + "&password=" + password,
-                success: function (data) {
-                    $("#response").html(data);
+                            <div class="form-group col-md-12">
+                                <button id="register" class="btn btn-primary btn-lg btn-block backGroundColorOrange">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- script references -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+
+
+
+        </script>
+        <script>
+            
+            function doubleEverySeconddigit(size, ccn) {
+                var sum = 0;
+                for (i = size - 2; i >= 0; i = i - 2) {
+                    var subSum = ccn[i] * 2;
+                    if (subSum > 9) {
+                        subSum = parseInt(subSum / 10) + subSum % 10;
+                    }
+                    sum += subSum;
                 }
-            });
-            return false;
-        });
-      });
+                return sum;
+            }
+            function oddPlacesSum(size, ccn) {
+                var sum = 0;
+                for (i = size - 1; i >= 0; i = i - 2) {
+                    sum += parseInt(ccn[i]);
+                }
+                return sum;
+            }
 
-    </script>
-	</body>
+            function isValid(ccn) {
+                if (ccn.length === 13 || ccn.length === 16) {
+
+                    var step1 = doubleEverySeconddigit(ccn.length, ccn);
+                    var step2 = oddPlacesSum(ccn.length, ccn);
+                    var luhn = step1 + step2;
+    
+                    if (luhn % 10 === 0) {
+                        if (ccn[0] === 4) {
+                            //System.out.println("Visa Card");
+                        } else if (ccn[0] === 5) {
+                            //System.out.println("Master Card");
+                        } else if (ccn[0] === 3 && ccn[1] === 7) {
+                            //System.out.println("American Express");
+                        }
+                        //System.out.println("Verified");
+                        return true;
+                    } else {
+                        //System.out.print("Wrong Credit Number");
+                        return false;
+                    }
+                } else {
+                    //System.out.print("Wrong Credit Number");
+                    return false;
+                }
+            }
+
+            $(document).ready(function () {
+
+                $("#register").click(function () {
+
+                    var username = $("#username").val();
+                    var password = $("#password").val();
+                    var cardnumber = $("#cardnumber").val();
+
+                    if (isValid(cardnumber)) {
+                        alert("Valid.");
+                        $.ajax({
+                            type: "POST",
+                            url: "user.jsp",
+                            data: "user=" + username + "&pass=" + password + "&card=" + cardnumber,
+                            success: function (data) {
+                                alert(data);
+                                //window.location.replace("URL");
+                            }
+                        });
+                    } else {
+                        alert("Problem with card;");
+                    }
+
+
+                    return false;
+                });
+            });
+
+        </script>
+    </body>
 </html>
